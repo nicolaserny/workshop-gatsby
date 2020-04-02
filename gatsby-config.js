@@ -39,5 +39,18 @@ module.exports = {
         path: 'images',
       },
     },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: { username: 'nicolaserny' },
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        production: true,
+        disable: !process.env.ANALYSE_BUNDLE_SIZE,
+        generateStatsFile: true,
+        analyzerMode: 'static',
+      },
+    },
   ],
 };
